@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürünler</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .product img {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        object-fit: cover;
+      }
+      #featured
+        > div.row.mx-auto.container
+        > nav
+        > ul
+        > li.page-item.active
+        > a {
+        background-color: black;
+      }
+      #featured
+        > div.row.mx-auto.container
+        > nav
+        > ul
+        > li:nth-child(n):hover
+        > a {
+        background-color: coral;
+        color: white;
+      }
+      .pagination a {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+      <div class="container">
+        <a href="index.html"><img src="img/logo1.png" alt="" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span><i id="bar" class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="shop.html">Ürünler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Haberler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">İletişim</a>
+            </li>
+            <li class="nav-item">
+              <div class="cart-btn">
+                <i id="cart" class="fal fa-shopping-bag"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="cart-btn">
+        <i id="cart" class="fal fa-shopping-bag"></i>
+        <span class="cart-quantity">0</span>
+      </div> -->
+
+      <div class="cart-modal-overlay">
+        <div class="cart-modal">
+          <i id="close-btn" class="fas fa-times"></i>
+          <h1 class="cart-is-empty">Sepet boş</h1>
+          <div class="product-rows"></div>
+          <div class="total">
+            <h1 class="cart-total">Toplam</h1>
+            <span class="total-price">0₺</span>
+            <a href="payment.html" class="btn purchase-btn">Satın Alma</a>         
+           </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
+    <!-- Featured Start -->
+    <section id="featured" class="my-5 py-5">
+      <div class="container mt-5 py-5">
+        <h2 class="font-weight-bold">Öne Çıkan Ürünlerimiz</h2>
+        <hr />
+        <p>
+          Müşterilerimizin beklentilerini karşılayan ve özel ihtiyaçlarına hitap
+          eden ürünler, "Öne Çıkan Ürünlerimiz" kategorisinde bir araya geliyor.
+          Her biri özenle seçilmiş ve en üst kalite standartlarına sahip olan bu
+          ürünler, kullanıcılarımızın yaşamlarını kolaylaştıran ve daha keyifli
+          hale getiren çeşitli seçenekler sunar.
+        </p>
+      </div>
+      <div class="row mx-auto container">
+        <div class="items-container">
+          <div class="card-1 card">
+            <img class="product-image" src="img/featured/1.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-2 card">
+            <img class="product-image" src="img/featured/2.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-3 card">
+            <img class="product-image" src="img/featured/3.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-4 card">
+            <img class="product-image" src="img/featured/4.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+        </div>
+        <div class="items-container">
+          <div class="card-1 card">
+            <img class="product-image" src="img/featured/1.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-2 card">
+            <img class="product-image" src="img/featured/2.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-3 card">
+            <img class="product-image" src="img/featured/3.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-4 card">
+            <img class="product-image" src="img/featured/4.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+        </div>
+        <div class="items-container">
+          <div class="card-1 card">
+            <img class="product-image" src="img/featured/1.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-2 card">
+            <img class="product-image" src="img/featured/2.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-3 card">
+            <img class="product-image" src="img/featured/3.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+          <div class="card-4 card">
+            <img class="product-image" src="img/featured/4.jpg" alt="" />
+            <button class="add-to-cart">Sepete Ekle</button>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">Spor Botları</h5>
+            <h4 class="product-price">990₺</h4>
+          </div>
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination mt-5">
+            <li class="page-item disabled">
+              <a class="page-link">Önceki</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Sonraki</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- Featured End -->
+    <!-- Footer Start -->
+    <footer class="mt-5 py-5">
+      <div class="row container mx-auto pt-5">
+        <div class="footer-one col-lg-3 col-md-6 col-12">
+          <img src="img/logo2.png" alt="" />
+          <p class="pt-3">
+            Arkamızdaki güç, hikayemizin ta kendisi. "Ekibimizin Hikayesini
+            Keşfedin" başlığı altında, bizimle yolculuğa çıkmaya davet ediyoruz.
+            Biz, tutkuyla bağlı bir ekip olarak, bir araya gelerek büyük
+            hayallerin peşinden koşuyoruz.
+          </p>
+        </div>
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+          <h5 class="pb-2">Öne Çıkanlar</h5>
+          <ul class="text-uppercase list-unstyled">
+            <li><a href="#">Erkekler</a></li>
+            <li><a href="#">Kadınlar</a></li>
+            <li><a href="#">Çocuklar</a></li>
+            <li><a href="#">Kızlar</a></li>
+            <li><a href="#">Yeni Gelenler</a></li>
+            <li><a href="#">Ayakkabılar</a></li>
+          </ul>
+        </div>
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+          <h5 class="pb-2">İletişim</h5>
+          <div>
+            <h6 class="text-uppercase">Adres</h6>
+            <p>
+              Çekmeköy, Mehmet Akif Mahallesi, Fatih Sultan Mehmet Caddesi, No:
+              123, Daire: 27
+            </p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">Telefon</h6>
+            <p>0543 418 77 65</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">E-Mail</h6>
+            <p>rymo@example.com</p>
+          </div>
+        </div>
+
+        <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+          <h5 class="pb-2">Instagram</h5>
+          <div class="row">
+            <img
+              class="img-fluid w-25 h-100 m-2"
+              src="img/insta/1.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid w-25 h-100 m-2"
+              src="img/insta/2.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid w-25 h-100 m-2"
+              src="img/insta/3.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid w-25 h-100 m-2"
+              src="img/insta/4.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid w-25 h-100 m-2"
+              src="img/insta/5.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="copyright mt-5 mb-4">
+        <div class="row container mx-auto">
+          <div class="col-lg-3 col-md-6 col-lg-12 mb-4">
+            <img src="img/payment.png" alt="" />
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+            <p>rymo eCommerce @ 2021. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      // open cart modal
+      const cart = document.querySelector("#cart");
+      const cartModalOverlay = document.querySelector(".cart-modal-overlay");
+
+      cart.addEventListener("click", () => {
+        if (cartModalOverlay.style.transform === "translateX(-200%)") {
+          cartModalOverlay.style.transform = "translateX(0)";
+        } else {
+          cartModalOverlay.style.transform = "translateX(-200%)";
+        }
+      });
+      // end of open cart modal
+
+      // close cart modal
+      const closeBtn = document.querySelector("#close-btn");
+
+      closeBtn.addEventListener("click", () => {
+        cartModalOverlay.style.transform = "translateX(-200%)";
+      });
+
+      cartModalOverlay.addEventListener("click", (e) => {
+        if (e.target.classList.contains("cart-modal-overlay")) {
+          cartModalOverlay.style.transform = "translateX(-200%)";
+        }
+      });
+      // end of close cart modal
+
+      // add products to cart
+      const addToCart = document.getElementsByClassName("add-to-cart");
+      const productRow = document.getElementsByClassName("product-row");
+
+      for (var i = 0; i < addToCart.length; i++) {
+        button = addToCart[i];
+        button.addEventListener("click", addToCartClicked);
+      }
+
+      function addToCartClicked(event) {
+        button = event.target;
+        var cartItem = button.parentElement;
+        var price =
+          cartItem.getElementsByClassName("product-price")[0].innerText;
+
+        var imageSrc = cartItem.getElementsByClassName("product-image")[0].src;
+        addItemToCart(price, imageSrc);
+        updateCartPrice();
+      }
+
+      function addItemToCart(price, imageSrc) {
+        var productRow = document.createElement("div");
+        productRow.classList.add("product-row");
+        var productRows = document.getElementsByClassName("product-rows")[0];
+        var cartImage = document.getElementsByClassName("cart-image");
+
+        for (var i = 0; i < cartImage.length; i++) {
+          if (cartImage[i].src == imageSrc) {
+            alert("This item has already been added to the cart");
+            return;
+          }
+        }
+
+        var cartRowItems = `
+  <div class="product-row">
+        <img class="cart-image" src="${imageSrc}" alt="">
+        <span class ="cart-price">${price}</span>
+        <input class="product-quantity" type="number" value="1">
+        <button class="remove-btn">Remove</button>
+        </div>
+        
+      `;
+        productRow.innerHTML = cartRowItems;
+        productRows.append(productRow);
+        productRow
+          .getElementsByClassName("remove-btn")[0]
+          .addEventListener("click", removeItem);
+        productRow
+          .getElementsByClassName("product-quantity")[0]
+          .addEventListener("change", changeQuantity);
+        updateCartPrice();
+      }
+      // end of add products to cart
+
+      // Remove products from cart
+      const removeBtn = document.getElementsByClassName("remove-btn");
+      for (var i = 0; i < removeBtn.length; i++) {
+        button = removeBtn[i];
+        button.addEventListener("click", removeItem);
+      }
+
+      function removeItem(event) {
+        btnClicked = event.target;
+        btnClicked.parentElement.parentElement.remove();
+        updateCartPrice();
+      }
+
+      // update quantity input
+      var quantityInput =
+        document.getElementsByClassName("product-quantity")[0];
+
+      for (var i = 0; i < quantityInput; i++) {
+        input = quantityInput[i];
+        input.addEventListener("change", changeQuantity);
+      }
+
+      function changeQuantity(event) {
+        var input = event.target;
+        if (isNaN(input.value) || input.value <= 0) {
+          input.value = 1;
+        }
+        updateCartPrice();
+      }
+      // end of update quantity input
+
+      // update total price
+      function updateCartPrice() {
+        var total = 0;
+        for (var i = 0; i < productRow.length; i += 2) {
+          cartRow = productRow[i];
+          var priceElement = cartRow.getElementsByClassName("cart-price")[0];
+          var quantityElement =
+            cartRow.getElementsByClassName("product-quantity")[0];
+          var price = parseFloat(priceElement.innerText.replace("$", ""));
+          var quantity = quantityElement.value;
+          total = total + price * quantity;
+        }
+        document.getElementsByClassName("total-price")[0].innerText =
+          "$" + total;
+
+        document.getElementsByClassName("cart-quantity")[0].textContent =
+          i /= 2;
+      }
+      // end of update total price
+
+      // purchase items
+      const purchaseBtn = document.querySelector(".purchase-btn");
+
+      const closeCartModal = document.querySelector(".cart-modal");
+
+      purchaseBtn.addEventListener("click", purchaseBtnClicked);
+
+      function purchaseBtnClicked() {
+        alert("Thank you for your purchase");
+        cartModalOverlay.style.transform = "translateX(-100%)";
+        var cartItems = document.getElementsByClassName("product-rows")[0];
+        while (cartItems.hasChildNodes()) {
+          cartItems.removeChild(cartItems.firstChild);
+        }
+        updateCartPrice();
+      }
+      // end of purchase items
+
+      //alert user if cart is empty
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
